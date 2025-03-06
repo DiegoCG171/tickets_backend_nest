@@ -36,7 +36,7 @@ export class AuthService {
 
   async login(loginUserDto: LoginUserDto) {
     const user = await this.userModel
-      .findOne({ userName: loginUserDto.userName })
+      .findOne({ email: loginUserDto.email })
       .exec();
 
     if (!user) throw new UnauthorizedException('Credenciales invalidas');

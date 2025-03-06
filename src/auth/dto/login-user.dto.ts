@@ -5,7 +5,7 @@ export class LoginUserDto {
 
     @IsString()
     @MinLength(1)
-    userName: string;
+    email: string;
 
     @IsString()
     @MinLength(6)
